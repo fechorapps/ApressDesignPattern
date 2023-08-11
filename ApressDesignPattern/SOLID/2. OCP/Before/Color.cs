@@ -1,9 +1,8 @@
-﻿namespace ApressDesignPattern.SOLID._2._OCP.Before
+﻿namespace ApressDesignPattern.SOLID._2._OCP.Before;
+
+public enum Color
 {
-    public enum Color
-    {
-        Red,
-        Green, 
-        Blue
-    }
+    Red,
+    Green, 
+    Blue
 }

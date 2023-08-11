@@ -1,10 +1,9 @@
-﻿namespace ApressDesignPattern.SOLID._2._OCP.Before
+﻿namespace ApressDesignPattern.SOLID._2._OCP.Before;
+
+public enum Size
 {
-    public enum Size
-    {
-        Small, 
-        Medium, 
-        Large, 
-        Yuge
-    }
+    Small, 
+    Medium, 
+    Large, 
+    Yuge
 }

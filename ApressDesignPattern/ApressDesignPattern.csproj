@@ -11,4 +11,12 @@
     <Folder Include="SOLID\2. OCP\Zillow\After\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <EditorConfigFiles Remove="D:\projects\fechorApps\ApressDesignPattern\ApressDesignPattern\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="D:\projects\fechorApps\ApressDesignPattern\ApressDesignPattern\.editorconfig" />
+  </ItemGroup>
+
 </Project>

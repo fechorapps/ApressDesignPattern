@@ -1,22 +1,21 @@
-﻿namespace ApressDesignPattern.SOLID._2._OCP.Zillow.Before
+﻿namespace ApressDesignPattern.SOLID._2._OCP.Zillow.Before;
+
+public class MatchingManager
 {
-    public class MatchingManager
+    public List<SavedSearch> GetMatchingSavedSearches(Customer customer, Property newProperty)
     {
-        public List<SavedSearch> GetMatchingSavedSearches(Customer customer, Property newProperty)
+        List<SavedSearch> matchingSearches = new List<SavedSearch>();
+
+        foreach (SavedSearch search in customer.SavedSearches)
         {
-            List<SavedSearch> matchingSearches = new List<SavedSearch>();
-
-            foreach (SavedSearch search in customer.SavedSearches)
+            if (search.PreferredLocation == newProperty.Location &&
+                search.MaxPrice >= newProperty.Price &&
+                search.MinNumberOfRooms <= newProperty.NumberOfRooms)
             {
-                if (search.PreferredLocation == newProperty.Location &&
-                    search.MaxPrice >= newProperty.Price &&
-                    search.MinNumberOfRooms <= newProperty.NumberOfRooms)
-                {
-                    matchingSearches.Add(search);
-                }
+                matchingSearches.Add(search);
             }
-
-            return matchingSearches;
         }
+
+        return matchingSearches;
     }
 }

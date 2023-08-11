@@ -1,9 +1,8 @@
-﻿namespace ApressDesignPattern.SOLID._2._OCP.After.ProductAgg.Entities
+﻿namespace ApressDesignPattern.SOLID._2._OCP.After.ProductAgg.Entities;
+
+public enum Color
 {
-    public enum Color
-    {
-        Red,
-        Green, 
-        Blue
-    }
+    Red,
+    Green, 
+    Blue
 }

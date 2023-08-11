@@ -1,14 +1,13 @@
-﻿namespace ApressDesignPattern.SOLID.SRP.After
+﻿namespace ApressDesignPattern.SOLID.SRP.After;
+
+public class PersistenceManager
 {
-    public class PersistenceManager
+    public void SaveToFile(
+        Journal journal, 
+        string filename,
+        bool overwrite = false)
     {
-        public void SaveToFile(
-            Journal journal, 
-            string filename,
-            bool overwrite = false)
-        {
-            if (overwrite || !File.Exists(filename))
-                File.WriteAllText(filename, journal.ToString());
-        }
+        if (overwrite || !File.Exists(filename))
+            File.WriteAllText(filename, journal.ToString());
     }
 }
